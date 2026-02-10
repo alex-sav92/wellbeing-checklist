@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f6f7f5;
+  color: #2f2f2f;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background: white;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.date {
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checklist input {
+  margin-right: 0.75rem;
+  transform: scale(1.2);
+}
+
+.checklist label {
+  cursor: pointer;
+}
+
+.progress {
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
