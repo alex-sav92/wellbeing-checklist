@@ -1,9 +1,15 @@
 const checklistItems = [
-  "Drink water",
-  "Go outside",
+  "Drink 2L water",
+  "Spirituality content",
   "Move your body",
   "Eat something nourishing",
-  "Take a quiet moment"
+  "Read ~50 pages of a book",
+  "Practice reflection, gratitude",
+  "Do something nice for your body",
+  "Improve your space",
+  "One thing to bring joy",
+  "Interact with someone",
+  "10 mins for professional development"
 ]
 
 const checklistEl = document.getElementById("checklist")
@@ -50,7 +56,38 @@ function render() {
 
 function updateProgress() {
   const done = state.filter(Boolean).length
-  progressEl.textContent = `${done} / ${checklistItems.length} done`
+  const total = checklistItems.length
+
+  progressEl.textContent = `${done} / ${total} done`
+
+  if (done === total && !hasCelebrated) {
+    celebrate()
+    hasCelebrated = true
+  }
+
+  if (done < total) {
+    hasCelebrated = false
+  }
+}
+
+function celebrate() {
+  const confetti = document.createElement("div")
+  confetti.className = "confetti"
+
+  const colors = ["#a8d5ba", "#f6c1cc", "#cdb4db", "#ffd6a5"]
+
+  for (let i = 0; i < 20; i++) {
+    const piece = document.createElement("span")
+    piece.style.setProperty("--x", `${Math.random() * 200 - 100}px`)
+    piece.style.setProperty("--c", colors[i % colors.length])
+    piece.style.left = `${Math.random() * 100}px`
+    piece.style.animationDelay = `${Math.random() * 0.3}s`
+    confetti.appendChild(piece)
+  }
+
+  document.body.appendChild(confetti)
+
+  setTimeout(() => confetti.remove(), 1600)
 }
 
 render()
