@@ -8,7 +8,7 @@ const checklistItems = [
   "Care for your body",
   "Improve your space",
   "One thing to bring joy",
-  "Interaction,
+  "Interaction",
   "10 mins for professional development"
 ]
 
