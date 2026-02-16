@@ -1,14 +1,14 @@
 const checklistItems = [
   "Drink 2L water",
   "Spirituality content",
-  "Move your body",
+  "Move",
   "Eat something nourishing",
-  "Read ~50 pages of a book",
-  "Practice reflection, gratitude",
-  "Do something nice for your body",
+  "Read",
+  "Reflection, gratitude",
+  "Care for your body",
   "Improve your space",
   "One thing to bring joy",
-  "Interact with someone",
+  "Interaction,
   "10 mins for professional development"
 ]
 
