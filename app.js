@@ -21,7 +21,7 @@ const storageKey = `wellbeing-${today}`
 
 dateEl.textContent = new Date().toLocaleDateString(undefined, {
   weekday: "long",
-  month: "long",
+  month: "short",
   day: "numeric"
 })
 
